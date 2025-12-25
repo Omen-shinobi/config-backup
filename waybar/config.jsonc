@@ -1,0 +1,18 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 26, // Slimmer height like i3
+    "spacing": 0, // No gaps between modules
+    "modules-left": ["hyprland/workspaces", "hyprland/submap"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["pulseaudio", "network", "cpu", "memory", "clock", "tray"],
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{name}"
+    },
+    "clock": {
+        "format": "{:%Y-%m-%d %H:%M}"
+    }
+}

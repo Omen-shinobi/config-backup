@@ -1,0 +1,42 @@
+/* Reset everything to sharp edges and zero gaps */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrains Mono", "Terminus", monospace;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: #191919; /* Solid dark background */
+    color: #ffffff;
+    border-bottom: 2px solid #285577; /* i3-style accent line */
+}
+
+/* Individual modules as 'Blocks' */
+#workspaces button {
+    padding: 0 10px;
+    background: #222222;
+    color: #888888;
+}
+
+#workspaces button.active {
+    background: #285577; /* i3 Blue */
+    color: #ffffff;
+}
+
+#workspaces button.urgent {
+    background: #900000;
+    color: #ffffff;
+}
+
+/* Styling the right-side status blocks */
+#clock, #battery, #cpu, #memory, #network, #pulseaudio, #tray {
+    padding: 0 10px;
+    margin: 0;
+    border-left: 1px solid #444444; /* Vertical separators */
+}
+
+/* Highlight specific blocks like i3status */
+#battery.charging { color: #00ff00; }
+#battery.critical { background: #ff0000; }
