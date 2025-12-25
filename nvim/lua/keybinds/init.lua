@@ -1,0 +1,10 @@
+---@diagnostic disable: undefined-global
+require("keybinds.buffer")
+require("keybinds.flash")
+require("keybinds.fzf")
+require("keybinds.general")
+require("keybinds.gitsigns")
+require("keybinds.lsp")
+require("keybinds.terminal")
+require("keybinds.terminal")
+require("keybinds.trouble")
