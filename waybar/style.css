@@ -1,42 +1,41 @@
-/* Reset everything to sharp edges and zero gaps */
 * {
+    font-family: "Terminus", "Roboto", sans-serif;
+    font-size: 15px;
     border: none;
     border-radius: 0;
-    font-family: "JetBrains Mono", "Terminus", monospace;
-    font-size: 13px;
-    min-height: 0;
+    color: #ff0000;
 }
 
 window#waybar {
-    background: #191919; /* Solid dark background */
+    background-color: #000000; /* Semi-transparent */
     color: #ffffff;
-    border-bottom: 2px solid #285577; /* i3-style accent line */
+    /*border: 1px solid #ff0000;*/
 }
 
-/* Individual modules as 'Blocks' */
-#workspaces button {
-    padding: 0 10px;
-    background: #222222;
-    color: #888888;
+/* Individual Module Styling */
+#network, #cpu, #memory, #battery, #clock {
+    padding: 0 12px;
+    /*margin: 4px 2px;  This creates the gap between blocks */
+    background-color: #000000;
+    /*border-bottom: 1px solid #ff0000;
+    border-top: 1px solid #ff0000;*/  
 }
 
-#workspaces button.active {
-    background: #285577; /* i3 Blue */
-    color: #ffffff;
+#clock.utc {
+    background-color: #000000;
+    /*border-bottom: 2px solid #ff0000;  Green for UTC */
 }
 
-#workspaces button.urgent {
-    background: #900000;
-    color: #ffffff;
+#clock.india {
+    background-color: #000000;
+    /*border-bottom: 2px solid #ff0000;  Yellow for IST */
 }
 
-/* Styling the right-side status blocks */
-#clock, #battery, #cpu, #memory, #network, #pulseaudio, #tray {
-    padding: 0 10px;
-    margin: 0;
-    border-left: 1px solid #444444; /* Vertical separators */
+#battery.critical {
+    color: #ff5555;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
-
-/* Highlight specific blocks like i3status */
-#battery.charging { color: #00ff00; }
-#battery.critical { background: #ff0000; }

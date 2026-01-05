@@ -1,0 +1,19 @@
+color=000000
+indicator-radius=150
+indicator-thickness=20
+font-size=22
+
+ring-color=ff0000
+key-hl-color=880000
+inside-color=000000
+separator-color=000000
+text-color=ff0000
+inside-color=000000
+line-color=00000000
+separator-color=00000000
+
+bs-hl-color=ff0000
+ring-ver-color=ff0000
+inside-ver-color=000000
+timestr=%H:%M
+datestr=%A, %d %b

@@ -1,0 +1,71 @@
+{
+    "layer":"bottom",
+    "position":"bottom",
+    "height":33,
+    "spacing":2,
+    "modules-left":["hyprland/workspaces"],
+    "modules-right": [
+        "network",
+        "custom/separator",
+        "custom/cpu_decimal",
+        "custom/separator",
+        "custom/memory",
+        "custom/separator",
+        "battery",
+        "custom/separator",
+        "clock#UTC",
+        "custom/separator",
+        "clock#india",
+        "custom/separator",
+        "tray"
+    ],
+    "network":{
+        "format-wifi":"W: ({signalStrength}% at {essid}) {ipaddr}",
+        "format-ethernet":" {ipaddr} ",
+        "format-disconnected": "Disconnected",
+        "tooltip-format": "{ifname} via {gwaddr}"
+    },
+    "custom/separator":{
+        "format":"|",
+        "interval":"once",
+        "tooltip":false
+    },
+
+    "custom/cpu_decimal":{
+        "exec":"~/.config/waybar/scripts/cpu_decimal.sh",
+        "interval":2,
+        "format": " {} ",
+        "tooltip":false
+    },
+    "custom/memory":{
+        "format": " {} ",
+        "interval": 5,
+        "exec": "~/.config/i3blocks/memory_htop.sh",
+        "tooltip":false 
+        
+    
+        
+       
+    },
+    "battery":{
+        "states":{"warning":20,"critical":15},
+        "format": "{capacity}%"
+    },
+    "clock#UTC":{
+        "timezone":"UTC",
+        "format":"UTC {:%H:%M}",
+        "tooltip-format":"<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "clock#india":{
+        "timezone":"Asia/Kolkata",
+        "format": "{:%H:%M}",
+        "tooltip-format":"<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate",
+        "format": "{name}" 
+    }
+}
