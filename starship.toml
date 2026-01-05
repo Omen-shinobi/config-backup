@@ -1,0 +1,32 @@
+# Get rid of the boring defaults
+add_newline = true
+
+[character]
+success_symbol = "[†](bold red)"
+error_symbol = "[×](bold #880000)"
+
+[directory]
+style = "bold #ff0000"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[username]
+show_always = true
+style_user = "bold #550000"
+format = "[$user]($style)"
+
+[hostname]
+ssh_only = false
+style = "bold #aa0000"
+format = "[@$hostname]($style) "
+
+[git_branch]
+symbol = " "
+style = "bold #ff0000"
+format = "on [$symbol$branch]($style) "
+
+[custom.rune]
+command = "echo 'ᛒ'" # Ancient Rune look
+when = "true"
+style = "bold #ff0000"
+format = "[$output]($style) "
